@@ -2,7 +2,7 @@
 Description=Crater Lake Server
 
 [Service]
-ExecStart=/usr/local/bin/node ~/craterLake/app.js
+ExecStart=/usr/local/bin/node /home/zach/craterLake/app.js
 Restart=always
  # Restart service after 10 seconds if node service crashes
  RestartSec=10
