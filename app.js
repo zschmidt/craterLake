@@ -1,5 +1,6 @@
 var cp = require('child_process');
 number = 0;
+var prefix = "/home/zach/craterLake/";
 
 var getNumber = function(){
 	number++;
@@ -14,9 +15,9 @@ var getNumber = function(){
 
 var main = function() {
     var numberString = getNumber();
-    var getHQPhoto = "curl https://www.nps.gov/webcams-crla/cameraHQ.jpg > pics/hq/"+number+".jpg";
-    var getAlicePhoto = "curl https://www.nps.gov/webcams-crla/camera0.jpg > pics/alice/"+number+".jpg";
-    var getCraterPhoto = "curl https://www.nps.gov/webcams-crla/camerasinnott.jpg > pics/crater/"+number+".jpg";
+    var getHQPhoto = "curl https://www.nps.gov/webcams-crla/cameraHQ.jpg > "+prefix+"pics/hq/"+number+".jpg";
+    var getAlicePhoto = "curl https://www.nps.gov/webcams-crla/camera0.jpg > "+prefix+"pics/alice/"+number+".jpg";
+    var getCraterPhoto = "curl https://www.nps.gov/webcams-crla/camerasinnott.jpg > "+prefix+"pics/crater/"+number+".jpg";
     cp.execSync(getHQPhoto);
     cp.execSync(getAlicePhoto);
     cp.execSync(getCraterPhoto);
